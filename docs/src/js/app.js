@@ -31,7 +31,7 @@ client.on('chat', (channel, userState, message, self) => {
     const now = new Date();
     const timeSinceLastMesageInMs =  Number(now) - Number(timeLastMessageWasSent);
     const minutesSinceLastMessage = timeSinceLastMesageInMs / 1000 / 60;
-    console.log(minutesSinceLastMessage);
+    
     if ( minutesSinceLastMessage > minutesOfSilenceBeforePlayingNotification){ 
         // Play notification sound.
         notification.play();
